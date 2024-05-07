@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Formulario de Inscripción</title>
 </head>
 <body>
+  <h2>COLEGIO SAN JOSE DE GUANENTÁ - Especialidad en Sistemas – 2024</h2>
+  <h3>DATOS DEL ESTUDIANTE</h3>
+  <form id="studentForm">
+    Nombre: <input type="text" name="nombre_estudiante"><br>
+    Edad: <input type="text" name="edad_estudiante"><br>
+    Tipo Documento Identidad: 
+    <input type="radio" name="tipo_documento" value="T.I"> T.I
+    <input type="radio" name="tipo_documento" value="C.C"> C.C
+    Número Documento Identidad: <input type="text" name="numero_documento"><br>
+    Lugar Expedición Documento Identidad: <input type="text" name="lugar_expedicion"><br>
+    Ciudad: <input type="text" name="ciudad"><br>
+    Teléfono: <input type="text" name="telefono"><br>
+    <label for="studentName">Nombre:</label>
+    <input type="text" id="studentName" name="studentName"><br><br>
+  </form>
+
+  
+  <h3>DATOS DEL PADRE</h3>
+  <form id="fatherForm">
+    <label for="fatherName">Nombre:</label>
+    <input type="text" id="fatherName" name="fatherName"><br><br>
+  </form>
+
+  <h3>DATOS DE LA MADRE</h3>
+  <form id="motherForm">
+    <label for="motherName">Nombre:</label>
+    <input type="text" id="motherName" name="motherName"><br><br>
+  </form>
+
+  <h3>DATOS DEL ACUDIENTE</h3>
+  <form id="guardianForm">
+    <label for="guardianName">Nombre:</label>
+    <input type="text" id="guardianName" name="guardianName"><br><br>
+  </form>
+
+  <script>
     
+  </script>
 </body>
 </html>

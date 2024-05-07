@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulario de Inscripción</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            text-align: center;
-        }
-        input[type="text"], input[type="email"], input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="radio"] {
-            margin: 8px 4px;
-        }
-        input[type="submit"] {
-            background-color: #424943;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #ebf8ec;
-        }
-    </style>
+  <title>Formulario de Inscripción</title>
+  <style>
+    h2, h3 {
+      margin-bottom: 10px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    input[type="text"], input[type="radio"] {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <form>
-        <h1>COLEGIO SAN JOSE DE GUANENTÁ</h1>
-        <h2>Especialidad en Sistemas – 2024</h2>
+  <h2>COLEGIO SAN JOSE DE GUANENTÁ - Especialidad en Sistemas – 2024</h2>
+  <h3>DATOS DEL ESTUDIANTE</h3>
+  <form id="studentForm">
+    <label for="studentName">Nombre:</label>
+    <input type="text" id="studentName" name="nombre_estudiante"><br>
+    <label for="studentAge">Edad:</label>
+    <input type="text" id="studentAge" name="edad_estudiante"><br>
+    <label>Tipo Documento Identidad:</label>
+    <input type="radio" name="tipo_documento" value="T.I"> T.I
+    <input type="radio" name="tipo_documento" value="C.C"> C.C<br>
+    <label>Número Documento Identidad:</label>
+    <input type="text" name="numero_documento"><br>
+    <label>Lugar Expedición Documento Identidad:</label>
+    <input type="text" name="lugar_expedicion"><br>
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="telefono"><br>
+  </form>
 
-        <h3>DATOS DEL ESTUDIANTE</h3>
-        Nombre: <input type="text" name="nombre_estudiante"><br>
-        Edad: <input type="text" name="edad_estudiante"><br>
-        Tipo Documento Identidad: 
-        <input type="radio" name="tipo_documento" value="T.I"> T.I
-        <input type="radio" name="tipo_documento" value="C.C"> C.C
-        Número Documento Identidad: <input type="text" name="numero_documento"><br>
-        <!-- Resto de campos del estudiante -->
+  <h3>DATOS DEL PADRE</h3>
+  <form id="fatherForm">
+    <label for="fatherName">Nombre:</label>
+    <input type="text" id="fatherName" name="fatherName"><br>
+    <label>Apellidos:</label>
+    <input type="text" name="fatherLastName"><br>
+    <label>Dirección:</label>
+    <input type="text" name="fatherAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="fatherNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="fatherPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="fatherCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="fatherEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="fatherOccupation"><br>
+  </form>
 
-        <h3>DATOS DEL PADRE</h3>
-        <!-- Campos para los datos del padre -->
+  <h3>DATOS DE LA MADRE</h3>
+  <form id="motherForm">
+    <label for="motherName">Nombre:</label>
+    <input type="text" id="motherName" name="motherName"><br>
+    <label>Apellidos:</label>
+    <input type="text" name="motherLastName"><br>
+    <label>Dirección:</label>
+    <input type="text" name="motherAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="motherNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="motherPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="motherCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="motherEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="motherOccupation"><br>
+  </form>
 
-        <h3>DATOS DE LA MADRE</h3>
-        <!-- Campos para los datos de la madre -->
+  <h3>DATOS DEL ACUDIENTE</h3>
+  <form id="guardianForm">
+    <label for="guardianName">Nombre:</label>
+    <input type="text" id="guardianName" name="guardianName"><br>
+    <label>Parentesco:</label>
+    <input type="text" name="guardianRelationship"><br>
+    <label>Dirección:</label>
+    <input type="text" name="guardianAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="guardianNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="guardianPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="guardianCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="guardianEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="guardianOccupation"><br>
+  </form>
 
-        <h3>DATOS DEL ACUDIENTE</h3>
-        <!-- Campos para los datos del acudiente -->
-
-        <input type="submit" value="Enviar">
-    </form>
-    <p>"Ser Guanentino, honor que cuesta"</p>
+  <script>
+    
+  </script>
 </body>
 </html>

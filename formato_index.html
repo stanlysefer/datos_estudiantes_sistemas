@@ -2,62 +2,101 @@
 <html>
 <head>
   <title>Formulario de Inscripción</title>
+  <style>
+    h2, h3 {
+      margin-bottom: 10px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    input[type="text"], input[type="radio"] {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <h2>COLEGIO SAN JOSE DE GUANENTÁ - Especialidad en Sistemas – 2024</h2>
   <h3>DATOS DEL ESTUDIANTE</h3>
   <form id="studentForm">
-    Nombre: <input type="text" name="nombre_estudiante"><br>
-    Edad: <input type="text" name="edad_estudiante"><br>
-    Tipo Documento Identidad: 
-    <input type="radio" name="tipo_documento" value="T.I"> T.I
-    <input type="radio" name="tipo_documento" value="C.C"> C.C
-    Número Documento Identidad: <input type="text" name="numero_documento"><br>
-    Lugar Expedición Documento Identidad: <input type="text" name="lugar_expedicion"><br>
-    Ciudad: <input type="text" name="ciudad"><br>
-    Teléfono: <input type="text" name="telefono"><br>
     <label for="studentName">Nombre:</label>
-    <input type="text" id="studentName" name="studentName"><br><br>
+    <input type="text" id="studentName" name="nombre_estudiante"><br>
+    <label for="studentAge">Edad:</label>
+    <input type="text" id="studentAge" name="edad_estudiante"><br>
+    <label>Tipo Documento Identidad:</label>
+    <input type="radio" name="tipo_documento" value="T.I"> T.I
+    <input type="radio" name="tipo_documento" value="C.C"> C.C<br>
+    <label>Número Documento Identidad:</label>
+    <input type="text" name="numero_documento"><br>
+    <label>Lugar Expedición Documento Identidad:</label>
+    <input type="text" name="lugar_expedicion"><br>
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="telefono"><br>
   </form>
 
-  
   <h3>DATOS DEL PADRE</h3>
   <form id="fatherForm">
     <label for="fatherName">Nombre:</label>
     <input type="text" id="fatherName" name="fatherName"><br>
-    Apellidos: <input type="text" name="fatherLastName"><br>
-    Dirección: <input type="text" name="fatherAddress"><br>
-    Barrio: <input type="text" name="fatherNeighborhood"><br>
-    Teléfono: <input type="text" name="fatherPhone"><br>
-    Celular: <input type="text" name="fatherCellphone"><br>
-    E-mail: <input type="text" name="fatherEmail"><br>
-    Ocupación: <input type="text" name="fatherOccupation"><br><br>
+    <label>Apellidos:</label>
+    <input type="text" name="fatherLastName"><br>
+    <label>Dirección:</label>
+    <input type="text" name="fatherAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="fatherNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="fatherPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="fatherCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="fatherEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="fatherOccupation"><br>
   </form>
 
   <h3>DATOS DE LA MADRE</h3>
   <form id="motherForm">
     <label for="motherName">Nombre:</label>
     <input type="text" id="motherName" name="motherName"><br>
-    Apellidos: <input type="text" name="motherLastName"><br>
-    Dirección: <input type="text" name="motherAddress"><br>
-    Barrio: <input type="text" name="motherNeighborhood"><br>
-    Teléfono: <input type="text" name="motherPhone"><br>
-    Celular: <input type="text" name="motherCellphone"><br>
-    E-mail: <input type="text" name="motherEmail"><br>
-    Ocupación: <input type="text" name="motherOccupation"><br><br>
+    <label>Apellidos:</label>
+    <input type="text" name="motherLastName"><br>
+    <label>Dirección:</label>
+    <input type="text" name="motherAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="motherNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="motherPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="motherCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="motherEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="motherOccupation"><br>
   </form>
 
   <h3>DATOS DEL ACUDIENTE</h3>
   <form id="guardianForm">
     <label for="guardianName">Nombre:</label>
     <input type="text" id="guardianName" name="guardianName"><br>
-    Parentesco: <input type="text" name="guardianRelationship"><br>
-    Dirección: <input type="text" name="guardianAddress"><br>
-    Barrio: <input type="text" name="guardianNeighborhood"><br>
-    Teléfono: <input type="text" name="guardianPhone"><br>
-    Celular: <input type="text" name="guardianCellphone"><br>
-    E-mail: <input type="text" name="guardianEmail"><br>
-    Ocupación: <input type="text" name="guardianOccupation"><br><br>
+    <label>Parentesco:</label>
+    <input type="text" name="guardianRelationship"><br>
+    <label>Dirección:</label>
+    <input type="text" name="guardianAddress"><br>
+    <label>Barrio:</label>
+    <input type="text" name="guardianNeighborhood"><br>
+    <label>Teléfono:</label>
+    <input type="text" name="guardianPhone"><br>
+    <label>Celular:</label>
+    <input type="text" name="guardianCellphone"><br>
+    <label>E-mail:</label>
+    <input type="text" name="guardianEmail"><br>
+    <label>Ocupación:</label>
+    <input type="text" name="guardianOccupation"><br>
   </form>
 
   <script>

@@ -3,104 +3,202 @@
 <head>
   <title>Formulario de Inscripción</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: flex-start; /* Alinea arriba */
+    }
     h2, h3 {
       margin-bottom: 10px;
+      color: #1a1a2e;
     }
-    form {
+    fieldset {
       margin-bottom: 20px;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    legend {
+      font-weight: bold;
+      color: #555555;
+      padding: 5px 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
     }
     label {
       display: inline-block;
-      width: 150px;
+      width: 200px;
+      margin-bottom: 5px;
+      color: #555555;
     }
-    input[type="text"], input[type="radio"] {
+    input[type="text"], input[type="radio"], input[type="tel"], input[type="email"], select, textarea {
       margin-bottom: 10px;
+      padding: 8px;
+      width: calc(100% - 220px);
+      border: 1px solid #dddddd;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
   <h2>COLEGIO SAN JOSE DE GUANENTÁ - Especialidad en Sistemas – 2024</h2>
-  <h3>DATOS DEL ESTUDIANTE</h3>
-  <form id="studentForm">
-    <label for="studentName">Nombre:</label>
-    <input type="text" id="studentName" name="nombre_estudiante"><br>
-    <label for="studentAge">Edad:</label>
-    <input type="text" id="studentAge" name="edad_estudiante"><br>
-    <label>Tipo Documento Identidad:</label>
-    <input type="radio" name="tipo_documento" value="T.I"> T.I
-    <input type="radio" name="tipo_documento" value="C.C"> C.C<br>
-    <label>Número Documento Identidad:</label>
-    <input type="text" name="numero_documento"><br>
-    <label>Lugar Expedición Documento Identidad:</label>
-    <input type="text" name="lugar_expedicion"><br>
-    <label>Ciudad:</label>
-    <input type="text" name="ciudad"><br>
-    <label>Teléfono:</label>
-    <input type="text" name="telefono"><br>
-  </form>
 
-  <h3>DATOS DEL PADRE</h3>
-  <form id="fatherForm">
-    <label for="fatherName">Nombre:</label>
-    <input type="text" id="fatherName" name="fatherName"><br>
-    <label>Apellidos:</label>
-    <input type="text" name="fatherLastName"><br>
-    <label>Dirección:</label>
-    <input type="text" name="fatherAddress"><br>
-    <label>Barrio:</label>
-    <input type="text" name="fatherNeighborhood"><br>
-    <label>Teléfono:</label>
-    <input type="text" name="fatherPhone"><br>
-    <label>Celular:</label>
-    <input type="text" name="fatherCellphone"><br>
-    <label>E-mail:</label>
-    <input type="text" name="fatherEmail"><br>
-    <label>Ocupación:</label>
-    <input type="text" name="fatherOccupation"><br>
-  </form>
+  <fieldset>
+    <legend>DATOS DEL ESTUDIANTE</legend>
+    <form id="studentForm">
+      <label for="studentName">Nombre:</label>
+      <input type="text" id="studentName" name="nombre_estudiante"><br>
+      <label for="studentAge">Edad:</label>
+      <input type="text" id="studentAge" name="edad_estudiante"><br>
+      <label for="birthdateDay">Fecha de Nacimiento:</label>
+      <select id="birthdateDay" name="birthdateDay">
+        <option value="">Día</option>
+        <!-- Aquí puedes añadir opciones para el día -->
+      </select>
+      <select id="birthdateMonth" name="birthdateMonth">
+        <option value="">Mes</option>
+        <!-- Aquí puedes añadir opciones para el mes -->
+      </select>
+      <select id="birthdateYear" name="birthdateYear">
+        <option value="">Año</option>
+        <!-- Aquí puedes añadir opciones para el año -->
+      </select><br>
+      <label>Tipo Documento Identidad:</label>
+      <input type="radio" name="tipo_documento" value="T.I"> T.I
+      <input type="radio" name="tipo_documento" value="C.C"> C.C<br>
+      <label>Número Documento Identidad:</label>
+      <input type="text" name="numero_documento"><br>
+      <label>Lugar Expedición Documento Identidad:</label>
+      <input type="text" name="lugar_expedicion"><br>
+      <label>Ciudad:</label>
+      <input type="text" name="ciudad"><br>
+      <label>Teléfono:</label>
+      <input type="tel" name="telefono" pattern="[0-9]{10}"><br>
+      <label>Celular:</label>
+      <input type="tel" name="celular" pattern="[0-9]{10}"><br>
+      <label>E-mail inst:</label>
+      <input type="email" name="email_institucional"><br>
+      <label>EPS:</label>
+      <input type="text" name="eps"><br>
+      <label>¿Sufre alguna enfermedad? Si:</label>
+      <input type="radio" name="enfermedad" value="Si">
+      No: <input type="radio" name="enfermedad" value="No"><br>
+      <label>Cuál?:</label>
+      <input type="text" name="enfermedad_cual"><br>
+      <label>Estrato socioeconómico:</label>
+      <input type="text" name="estrato"><br>
+      <label>Familias en Acción: Si:</label>
+      <input type="radio" name="familias_en_accion" value="Si">
+      No: <input type="radio" name="familias_en_accion" value="No"><br>
+      <label>Tipo de Religión:</label>
+      <input type="text" name="religion"><br>
+      <label>Relación Padres: Casados:</label>
+      <input type="radio" name="relacion_padres" value="Casados">
+      Divorciados: <input type="radio" name="relacion_padres" value="Divorciados">
+      Unión Libre: <input type="radio" name="relacion_padres" value="Unión Libre">
+      Otro: <input type="radio" name="relacion_padres" value="Otro"><br>
+      <label>Computadora en casa: Si:</label>
+      <input type="radio" name="computadora_casa" value="Si">
+      No: <input type="radio" name="computadora_casa" value="No"><br>
+      <label>Internet en casa: Si:</label>
+      <input type="radio" name="internet_casa" value="Si">
+      No: <input type="radio" name="internet_casa" value="No"><br>
+      <label>¿Cuáles son las principales actividades que usted realiza en su tiempo libre?</label><br>
+      <textarea name="actividades_tiempo_libre" rows="4" cols="50"></textarea><br>
+      <label>¿Cuáles son sus propósitos y espectativas personales y académicas como estudiante de la Especialidad en Sistemas?</label><br>
+      <textarea name="propositos_expectativas" rows="4" cols="50"></textarea><br>
+    </form>
+  </fieldset>
 
-  <h3>DATOS DE LA MADRE</h3>
-  <form id="motherForm">
-    <label for="motherName">Nombre:</label>
-    <input type="text" id="motherName" name="motherName"><br>
-    <label>Apellidos:</label>
-    <input type="text" name="motherLastName"><br>
-    <label>Dirección:</label>
-    <input type="text" name="motherAddress"><br>
-    <label>Barrio:</label>
-    <input type="text" name="motherNeighborhood"><br>
-    <label>Teléfono:</label>
-    <input type="text" name="motherPhone"><br>
-    <label>Celular:</label>
-    <input type="text" name="motherCellphone"><br>
-    <label>E-mail:</label>
-    <input type="text" name="motherEmail"><br>
-    <label>Ocupación:</label>
-    <input type="text" name="motherOccupation"><br>
-  </form>
+  <fieldset>
+    <legend>DATOS DEL PADRE</legend>
+    <form id="fatherForm">
+      <label for="fatherName">Nombre:</label>
+      <input type="text" id="fatherName" name="fatherName"><br>
+      <label>Apellidos:</label>
+      <input type="text" name="fatherLastName"><br>
+      <label>Dirección:</label>
+      <input type="text" name="fatherAddress"><br>
+      <label>Barrio:</label>
+      <input type="text" name="fatherNeighborhood"><br>
+      <label>Teléfono:</label>
+      <input type="tel" name="fatherPhone" pattern="[0-9]{10}"><br>
+      <label>Celular:</label>
+      <input type="tel" name="fatherCellphone" pattern="[0-9]{10}"><br>
+      <label>E-mail:</label>
+      <input type="email" name="fatherEmail"><br>
+      <label>Ocupación:</label>
+      <input type="text" name="fatherOccupation"><br>
+    </form>
+  </fieldset>
 
-  <h3>DATOS DEL ACUDIENTE</h3>
-  <form id="guardianForm">
-    <label for="guardianName">Nombre:</label>
-    <input type="text" id="guardianName" name="guardianName"><br>
-    <label>Parentesco:</label>
-    <input type="text" name="guardianRelationship"><br>
-    <label>Dirección:</label>
-    <input type="text" name="guardianAddress"><br>
-    <label>Barrio:</label>
-    <input type="text" name="guardianNeighborhood"><br>
-    <label>Teléfono:</label>
-    <input type="text" name="guardianPhone"><br>
-    <label>Celular:</label>
-    <input type="text" name="guardianCellphone"><br>
-    <label>E-mail:</label>
-    <input type="text" name="guardianEmail"><br>
-    <label>Ocupación:</label>
-    <input type="text" name="guardianOccupation"><br>
-  </form>
+  <fieldset>
+    <legend>DATOS DE LA MADRE</legend>
+    <form id="motherForm">
+      <label for="motherName">Nombre:</label>
+      <input type="text" id="motherName" name="motherName"><br>
+      <label>Apellidos:</label>
+      <input type="text" name="motherLastName"><br>
+      <label>Dirección:</label>
+      <input type="text" name="motherAddress"><br>
+      <label>Barrio:</label>
+      <input type="text" name="motherNeighborhood"><br>
+      <label>Teléfono:</label>
+      <input type="tel" name="motherPhone" pattern="[0-9]{10}"><br>
+      <label>Celular:</label>
+      <input type="tel" name="motherCellphone" pattern="[0-9]{10}"><br>
+      <label>E-mail:</label>
+      <input type="email" name="motherEmail"><br>
+      <label>Ocupación:</label>
+      <input type="text" name="motherOccupation"><br>
+    </form>
+  </fieldset>
 
-  <script>
-    
-  </script>
+  <fieldset>
+    <legend>DATOS DEL ACUDIENTE</legend>
+    <form id="guardianForm">
+      <label for="guardianName">Nombre:</label>
+      <input type="text" id="guardianName" name="guardianName"><br>
+      <label>Parentesco:</label>
+      <input type="text" name="guardianRelationship"><br>
+      <label>Dirección:</label>
+      <input type="text" name="guardianAddress"><br>
+      <label>Barrio:</label>
+      <input type="text" name="guardianNeighborhood"><br>
+      <label>Teléfono:</label>
+      <input type="tel" name="guardianPhone" pattern="[0-9]{10}"><br>
+      <label>Celular:</label>
+      <input type="tel" name="guardianCellphone" pattern="[0-9]{10}"><br>
+      <label>E-mail:</label>
+      <input type="email" name="guardianEmail"><br>
+      <label>Ocupación:</label>
+      <input type="text" name="guardianOccupation"><br>
+    </form>
+  </fieldset>
+
 </body>
 </html>
+

@@ -9,3 +9,6 @@ Convierta en un formulario web el formato del documento adjunto
 
 # version 3
 ![img](img/version3.png "version3")
+
+# version 4
+![img](img/version4.png "version4")
